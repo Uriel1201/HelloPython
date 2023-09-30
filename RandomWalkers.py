@@ -3,7 +3,7 @@ import random
 # import stdio
 
 r      = int(sys.argv[1])
-trials = int(sys.args[2])
+trials = int(sys.argv[2])
 
 if r >= 0:
   sum = 0
