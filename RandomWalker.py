@@ -10,6 +10,7 @@ if r >= 0:
   # stdio.writeln()
   manhattan = 0
   steps = 0
+  
   while manhattan < r:
     p = random()
     
