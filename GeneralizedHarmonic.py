@@ -7,7 +7,7 @@ r = int(sys.argv[2])
 if n > 0:
   sum = 0.0
 
-  for i in range(n): df 
+  for i in range(n):
     term = 1.0 / pow(i + 1, r)
     sum = term + sum
 
