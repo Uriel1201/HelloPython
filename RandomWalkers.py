@@ -2,7 +2,7 @@ import sys
 import random
 # import stdio
 
-r = int(sys.argv[1])
+r      = int(sys.argv[1])
 trials = int(sys.args[2])
 
 if r >= 0:
