@@ -29,7 +29,7 @@ if r >= 0:
 
     sum = sum + steps
     
-  average = sum / trial
+  average = sum / trials
   print ('Average Number of Steps: ', end = '')
   print (average)
   # stdio.writeln()
