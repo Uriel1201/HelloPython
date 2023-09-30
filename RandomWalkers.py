@@ -27,7 +27,7 @@ if r >= 0:
       manhattan = ai + aj
       steps = steps + 1
 
-     sum = sum + steps
+    sum = sum + steps
     
   average = sum / trial
   print ('Average Number of Steps: ', end = '')
