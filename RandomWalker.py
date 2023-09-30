@@ -1,4 +1,5 @@
 import sys
+import random
 # import stdio
 
 r = int(sys.argv[1])
@@ -6,20 +7,28 @@ r = int(sys.argv[1])
 if r >= 0:
   i = 0
   j = 0
-  print('(' + i + ',' + j + ')')
+  print ('(', end = '')
+  print (i, end = '')
+  print (',', end = '')
+  print (j, end = '') 
+  print (')')
   # stdio.writeln()
   manhattan = 0
   steps = 0
   
   while manhattan < r:
-    p = random()
+    p = random.random()
     
     if p < 0.25:   i = i + 1
     elif p < 0.5:  i = i - 1
     elif p < 0.75: j = j + 1
     else:          j = j - 1
       
-    print('(' + i + ',' + j + ')')
+    print ('(', end = '')
+    print (i, end = '')
+    print (',', end = '')
+    print (j, end = '')
+    print (')')
     # stdio.writeln()
     
     ai = abs(i)
@@ -27,7 +36,8 @@ if r >= 0:
     manhattan = ai + aj
     steps = steps + 1
     
-  print('Steps: ' + steps)
+  print ('Steps: ', end = '')
+  print (steps)
   # stdio.writeln()
 
 else:
