@@ -18,4 +18,5 @@ for k in range(m):
   p = int(random.random() * s[n - 2])
   for j in range(1, n - 1):
     if s[j] > p and s[j - 1] <= p:
-      print (j)
+      print(j, end = ' ')
+      # stdio.write()
