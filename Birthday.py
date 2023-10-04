@@ -15,9 +15,9 @@ for i in range(trials):
   for j in range(n + 1):
     p = int(random.random() * n)
     count = count + 1
-    if b[p]: 
+    if birthday[p]: 
       break
-    b[p] = True
+    birthday[p] = True
     
   s[count] = s[count] + 1
 
