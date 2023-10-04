@@ -1,7 +1,7 @@
 # import stdio
 import sys
 import random 
-import numpy
+import numpy as np 
 
 n = int(sys.argv[1])
 trials = int(sys.argv[2])
@@ -26,9 +26,8 @@ f = 0.0
 for k in range(1, m):
   f = f + 1.0 * s[k] / trials 
   print(k, end = ' ')
-  print(s[], end = ' ')
+  print(s[k], end = ' ')
   print(f)
   # stdio.writeln()
   if f >= 0.5:
     break
-  
