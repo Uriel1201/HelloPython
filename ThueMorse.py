@@ -9,7 +9,7 @@ if n >= 0:
   
   for i in range(1, n):
     if i % 2 == 0: 
-      a[i] = a[i / 2]
+      a[i] = a[i // 2]
     else: 
       a[i] = 1 - a[i - 1]
       
