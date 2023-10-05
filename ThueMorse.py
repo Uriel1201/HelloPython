@@ -12,6 +12,7 @@ if n >= 0:
       a[i] = a[i / 2]
     else: 
       a[i] = 1 - a[i - 1]
+      
   for i in  range(n):
     for j in range(n):
       if a[i] == a[j]: 
