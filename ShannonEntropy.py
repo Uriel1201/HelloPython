@@ -29,6 +29,6 @@ def _readingE(regExp):
 
 #---------------------------------------------
 def readInt():
-  s = _readRegExp(r'[-+]?(0[xX][\dA-Fa-f]+|0[0-7]*|\d+)')
+  s = _readingE(r'[-+]?(0[xX][\dA-Fa-f]+|0[0-7]*|\d+)')
   radix = 10
   return int(s, radix)
