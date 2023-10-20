@@ -10,7 +10,7 @@ def isEmpty():
   global _contenedor 
   while _contenedor.strip() == '':
     line = sys.stdin.readline()
-    if line = '':
+    if line == '':
       return True
     _contenedor += line
  
