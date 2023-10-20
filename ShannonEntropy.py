@@ -14,7 +14,7 @@ def isEmpty():
       return True
     _contenedor += line
  
-  return False s 
+  return False 
 
 #---------------------------------------------
 def _readingE(regExp):
