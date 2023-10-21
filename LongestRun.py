@@ -38,7 +38,7 @@ def readInt():
   return int(s, 10)
 
 #---------------------------------------------
-max = 0
+_max = 0
 rep = 1
 x = readInt()
 best = x
@@ -50,8 +50,8 @@ while not isEmpty():
   else:
     x = y
     rep = 1
-  if max < rep:
-    max = rep
+  if _max < rep:
+    _max = rep
     best = y
 
 print('Longest Run: ', end = '')
