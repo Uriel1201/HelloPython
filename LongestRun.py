@@ -55,7 +55,7 @@ while not isEmpty():
     best = y
 
 print('Longest Run: ', end = '')
-print(max, end = '')
+print(_max, end = '')
 print('consecutive', end = '')
 print(best, end = '')
 print('s.')
