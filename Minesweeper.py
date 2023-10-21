@@ -42,14 +42,3 @@ for i in range(1, m + 1):
       # stdio.write()
   print()
   # stdio.writeln()
-    
-
-
-
-
-
-
-
-
-
-
