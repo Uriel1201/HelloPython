@@ -39,8 +39,8 @@ def readInt():
 
 #---------------------------------------------
 _max = 0
-rep = 1
-x = readInt()
+rep = 0
+x = 0
 best = x
 
 while not isEmpty(): 
@@ -55,7 +55,7 @@ while not isEmpty():
     best = y
 
 print('Longest Run: ', end = '')
-print(_max, end = '')
-print('consecutive', end = '')
+print(_max, end = ' ')
+print('consecutive', end = ' ')
 print(best, end = '')
 print('s.')
