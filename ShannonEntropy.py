@@ -50,5 +50,5 @@ for i in range(1, m + 1):
     arg = -p * np.log(p) / np.log(2)
     h = h + arg
 
-print('ShannonEntropy: ', end = '') 
-print(h)
+print('ShannonEntropy: ', end = '')
+print('{0:.4f}'.format(h))
