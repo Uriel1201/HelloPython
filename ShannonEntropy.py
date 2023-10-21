@@ -30,8 +30,7 @@ def _readingE(regExp):
 #---------------------------------------------
 def readInt():
   s = _readingE(r'[-+]?(0[xX][\dA-Fa-f]+|0[0-7]*|\d+)')
-  radix = 10
-  return int(s, radix)
+  return int(s, 10)
 
 #---------------------------------------------
 m = int(sys.argv[1]) 
@@ -45,7 +44,7 @@ while not isEmpty():
     n = n + 1
 
 h = 0.0
-for i in range(1, m + 1):s 
+for i in range(1, m + 1):
   if f[i] > 0:
     p = 1.0 * f[i] / n 
     arg = -p * np.log(p) / np.log(2)
