@@ -2,7 +2,7 @@ import sys
 import re
 import numpy as np
 
-sys.stdin = open(sys.stdin.fileno(), 'r', nowline = None)
+sys.stdin = open(sys.stdin.fileno(), 'r', newline = None)
 _contenedor = ''
 
 #---------------------------------------------
