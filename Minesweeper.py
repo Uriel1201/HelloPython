@@ -9,36 +9,23 @@ k = int(input("How Many Mines?"))
 t = m * n
 
 shuffle = np.zeros(t, dtype = bool)
-for h in range(k):
-  shuffle[h] = True
+shuffle[:k] = True
 
-for h in range(t):
-  p = h + int(random.random() * (t - h))
-  s = shuffle[p]
-  shuffle[p] = shuffle[h]
-  shuffle[h] = s
+np.random.shuffle(shuffle)
 
-mines = np.zeros([m + 2, n + 2], dtype = bool)
-for h in range(1, m + 1):
-  for i in range(1, n + 1):
-    mines[h][i] = shuffle[n * (h - 1) + i - 1]
+mines = shuffle((m + 2, n + 2))[1: -1]
 
 count = np.zeros([m + 2, n + 2], dtype = int) 
-row = 1
-while row < m + 1:
-  col = 1
-  while col < n + 1:
-    for i in range(row - 1, row + 2):
-      for j in range(col - 1, col + 2):
-        if mines[i][j]: count[row][col] = count[row][col] + 1
-    col = col + 1
-  row = row + 1
 
 for i in range(1, m + 1):
   for j in range(1, n + 1):
-    if mines[i][j]: print('*', end = '  ')
+    count[i, j] = np.sum(mines[i - 1 : i + 2, j - 1 : j + 2])
+
+for i in range(1, m + 1):
+  for j in range(1, n + 1):
+    if mines[i, j]: print('*', end = '  ')
       # stdio.write()
-    else: print(count[i][j], end = '  ')
+    else: print(count[i, j], end = '  ')
       # stdio.write()
   print()
   # stdio.writeln()
