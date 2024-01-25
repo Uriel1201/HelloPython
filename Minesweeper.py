@@ -3,9 +3,9 @@ import sys
 import random 
 import numpy as np 
 
-m = input("Number of files?")
-n = input("Number of Columns?")
-k = input("How Many Mines?")
+m = int(input("Number of files?"))
+n = int(input("Number of Columns?"))
+k = int(input("How Many Mines?"))
 t = m * n
 
 shuffle = np.zeros(t, dtype = bool)
