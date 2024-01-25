@@ -13,7 +13,7 @@ shuffle[:k] = True
 
 np.random.shuffle(shuffle)
 
-mines = shuffle((m + 2, n + 2))[1: -1]
+mines = shuffle.reshape((m + 2, n + 2))[1: -1]
 
 count = np.zeros([m + 2, n + 2], dtype = int) 
 
