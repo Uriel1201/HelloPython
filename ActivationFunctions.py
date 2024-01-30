@@ -1,16 +1,10 @@
-# %%
-# !! {"metadata":{
-# !!   "id": "YvXjAR-6znRR"
-# !! }}
 import math
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 
-# %%
-# !! {"metadata":{
-# !!   "id": "52sgmp0A6tE5"
-# !! }}
+
+#----------------------------------------------
 def heaviside(x):
     if np.isnan(x):
         return float('nan')
@@ -20,21 +14,17 @@ def heaviside(x):
         return 0.5
     else:
         return 1.0
+        
 
-# %%
-# !! {"metadata":{
-# !!   "id": "XCsgV1dq6-Va"
-# !! }}
+#----------------------------------------------
 def sigmoid(x):
     if np.isnan(x):
         return float('nan')
     x = -x
     return 1.0 / (1.0 + np.exp(x))
 
-# %%
-# !! {"metadata":{
-# !!   "id": "7Wj4y6iI7CSe"
-# !! }}
+
+#----------------------------------------------
 def tanh(x):
     if np.isnan(x):
         return float('nan')
@@ -48,10 +38,8 @@ def tanh(x):
         ey = np.exp(y)
         return (ex - ey) / (ex + ey)
 
-# %%
-# !! {"metadata":{
-# !!   "id": "2RDzagzx7GiV"
-# !! }}
+
+#----------------------------------------------
 def softsign(x):
     if np.isnan(x):
         return float('nan')
@@ -62,10 +50,8 @@ def softsign(x):
     else:
         return x / (1.0 + np.abs(x))
 
-# %%
-# !! {"metadata":{
-# !!   "id": "q49dX1np7KZ9"
-# !! }}
+
+#----------------------------------------------
 def sqnl(x):
     if np.isnan(x):
         return float('nan')
@@ -78,10 +64,8 @@ def sqnl(x):
     else:
         return 1.0
 
-# %%
-# !! {"metadata":{
-# !!   "id": "S3EePDX17Pei"
-# !! }}
+
+#----------------------------------------------
 def main():
     f = float(input("Enter a floating-point number: "))
     print(f'heaviside({f}) : {heaviside(f)}\n', end = '')
@@ -110,39 +94,7 @@ def main():
     plt.tight_layout()
     plt.show()
 
-# %%
-# !! {"metadata":{
-# !!   "colab": {
-# !!     "base_uri": "https://localhost:8080/",
-# !!     "height": 756
-# !!   },
-# !!   "id": "nuNvKs1IF25N",
-# !!   "executionInfo": {
-# !!     "status": "ok",
-# !!     "timestamp": 1706576607759,
-# !!     "user_tz": 360,
-# !!     "elapsed": 8564,
-# !!     "user": {
-# !!       "displayName": "Uriel Garc\u00eda",
-# !!       "userId": "03386744220426758265"
-# !!     }
-# !!   },
-# !!   "outputId": "27efc138-b725-47a2-9cef-bb42e3a0007e"
-# !! }}
+
+#----------------------------------------------
 if __name__ == '__main__':
     main()
-
-# %%
-# !! {"main_metadata":{
-# !!   "colab": {
-# !!     "provenance": [],
-# !!     "authorship_tag": "ABX9TyPLIYQrLeZjP2On/NraYjLL"
-# !!   },
-# !!   "kernelspec": {
-# !!     "name": "python3",
-# !!     "display_name": "Python 3"
-# !!   },
-# !!   "language_info": {
-# !!     "name": "python"
-# !!   }
-# !! }}
