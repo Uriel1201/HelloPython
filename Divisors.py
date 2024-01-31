@@ -1,15 +1,8 @@
-# %%
-# !! {"metadata":{
-# !!   "id": "rGnRPEkCH4Y2"
-# !! }}
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# %%
-# !! {"metadata":{
-# !!   "id": "Q54xz9mNIFf8"
-# !! }}
+#--------------------------------------------------
 def gcd(a, b):
     if b < 0:
         b = -b
@@ -28,38 +21,22 @@ def gcd(a, b):
             b = t % a
         return a
 
-# %%
-# !! {"metadata":{
-# !!   "id": "AD78AI1ZNp_z",
-# !!   "executionInfo": {
-# !!     "status": "ok",
-# !!     "timestamp": 1706740399060,
-# !!     "user_tz": 360,
-# !!     "elapsed": 406,
-# !!     "user": {
-# !!       "displayName": "Uriel Garc\u00eda",
-# !!       "userId": "03386744220426758265"
-# !!     }
-# !!   }
-# !! }}
+
+#--------------------------------------------------
 def lcm(a, b):
     if a == 0 or b == 0:
         return 0
     else:
         return np.abs(a) // gcd(a,b) * np.abs(b)
 
-# %%
-# !! {"metadata":{
-# !!   "id": "tU45RoVXPmJv"
-# !! }}
+
+#--------------------------------------------------
 def areRelativelyPrime(a, b):
     g = gcd(a,b)
     return g == 1
 
-# %%
-# !! {"metadata":{
-# !!   "id": "lpdUYImCQMER"
-# !! }}
+
+#--------------------------------------------------
 def dynamicPhi(n):
     if n < 0:
         raise ValueError('n must be positive')
@@ -72,20 +49,8 @@ def dynamicPhi(n):
                 phi[j] -= phi[j] // i
     return phi
 
-# %%
-# !! {"metadata":{
-# !!   "id": "ZQFYYpq5ZLnK",
-# !!   "executionInfo": {
-# !!     "status": "ok",
-# !!     "timestamp": 1706740405384,
-# !!     "user_tz": 360,
-# !!     "elapsed": 370,
-# !!     "user": {
-# !!       "displayName": "Uriel Garc\u00eda",
-# !!       "userId": "03386744220426758265"
-# !!     }
-# !!   }
-# !! }}
+
+#--------------------------------------------------
 def main():
     x = int(input("First Integer: "))
     y = int(input("Second Integer: "))
@@ -107,39 +72,7 @@ def main():
     plt.tight_layout()
     plt.show()
 
-# %%
-# !! {"metadata":{
-# !!   "colab": {
-# !!     "base_uri": "https://localhost:8080/",
-# !!     "height": 398
-# !!   },
-# !!   "id": "gvt_mSVUcVrM",
-# !!   "executionInfo": {
-# !!     "status": "ok",
-# !!     "timestamp": 1706740489760,
-# !!     "user_tz": 360,
-# !!     "elapsed": 31200,
-# !!     "user": {
-# !!       "displayName": "Uriel Garc\u00eda",
-# !!       "userId": "03386744220426758265"
-# !!     }
-# !!   },
-# !!   "outputId": "8c13338e-c980-478d-b728-2e3f97b1fb27"
-# !! }}
+
+#--------------------------------------------------
 if __name__ == '__main__':
     main()
-
-# %%
-# !! {"main_metadata":{
-# !!   "colab": {
-# !!     "provenance": [],
-# !!     "authorship_tag": "ABX9TyOkOr+hsvLwgsyUKfWWDSwZ"
-# !!   },
-# !!   "kernelspec": {
-# !!     "name": "python3",
-# !!     "display_name": "Python 3"
-# !!   },
-# !!   "language_info": {
-# !!     "name": "python"
-# !!   }
-# !! }}
