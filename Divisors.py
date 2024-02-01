@@ -7,12 +7,11 @@ import seaborn as sns
 """
 # **Divisors Methods**
 """
-
-
 #-----------------------------------------------------------------------
 """
 ### gcd(a, b):
-The greatest common divisor (gcd) of two integers a and b. By convention, gcd(0,0)=0.
+The greatest common divisor (gcd) of two integers a and b. 
+By convention, gcd(0,0)=0.
 """
 def gcd(a, b):
     if b < 0:
@@ -36,7 +35,8 @@ def gcd(a, b):
 #-----------------------------------------------------------------------
 """
 ### lcm(a, b):
-The least common multiple (lcm) of two integers a and b. By convention, if either a or b is 0, then lcm(a,b)=0.
+The least common multiple (lcm) of two integers a and b. 
+By convention, if either a or b is 0, then lcm(a,b)=0.
 """
 def lcm(a, b):
     if a == 0 or b == 0:
@@ -49,7 +49,8 @@ def lcm(a, b):
 """
 ### areRelativelyPrime(a, b):
 Are two integers a and b relatively prime?  
-Two integers are relatively prime if they share no common positive factors (divisors) except 1.
+Two integers are relatively prime if they share no common 
+positive factors (divisors) except 1.
 """
 def areRelativelyPrime(a, b):
     g = gcd(a,b)
@@ -59,7 +60,9 @@ def areRelativelyPrime(a, b):
 #-----------------------------------------------------------------------
 """
 ### dynamicPhi(n):
-This method dynamically updates the Euler’s totient function ϕ(i) for each i less than n. This approach is based on the Euler's product representation, where the product is taken over the distinct prime numbers that divide n.
+This method dynamically updates the Euler’s totient function ϕ(i) for each i less than n. 
+This approach is based on the Euler's product representation, where the product 
+is taken over the distinct prime numbers that divide n.
 """
 def dynamicPhi(n):
     if n < 0:
