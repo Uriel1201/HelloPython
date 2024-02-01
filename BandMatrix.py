@@ -1,7 +1,8 @@
 #-----------------------------------------------------------------
 """
 # Band Matrices
-Band Matrices are matrices whose non zero entries are restricted to a diagonal band. They arise in numerical linear algebra.
+Band Matrices are matrices whose non zero entries are restricted to a diagonal band. 
+They arise in numerical linear algebra.
 """
 #-----------------------------------------------------------------
 def main():
