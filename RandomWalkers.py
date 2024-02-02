@@ -33,7 +33,7 @@ def main():
     if r < 0:
         raise ValueError('r must represent a measure')
     else:
-        sum = 0
+        total_steps = 0
         x = []
         for t in range(trials):
             i = 0
@@ -54,8 +54,8 @@ def main():
                 aj = np.abs(j)
                 manhattan = ai + aj
                 steps += 1
-            sum += steps
-            dot = 1.0 * sum / (t + 1)
+            total_steps += steps
+            dot = 1.0 * total_steps / (t + 1)
             x.append(dot)
         print(f'Average Number of Steps: {1.0 * sum / trials}')
         X = np.array(x, dtype = float)
@@ -63,8 +63,9 @@ def main():
         plt.figure(figsize = (9, 7))
         sns.set(style= 'darkgrid')
         plt.title(f'Behaviour of the cocient #Steps/n')
-        plt.xlabel(f'trials')
-        plt.ylabel(f'Average')
+        plt.xlabel(f'Trial Number')
+        plt.ylabel(f'Average Number of Steps')
+        plt.legend(['Average Steps'])
         sns.lineplot(x = index, y = X, color = '#088F8F', marker = 'o')
         plt.tight_layout()
         plt.show()
