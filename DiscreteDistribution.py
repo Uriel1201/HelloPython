@@ -1,7 +1,4 @@
-# %%
-# !! {"metadata":{
-# !!   "id": "Oq8QfbL3kcmy"
-# !! }}
+#-------------------------------------------------------
 """
 # Discrete Distribution Simulation
 This script presents a simple algorithm for sampling
@@ -9,19 +6,13 @@ from a discrete probability distribution p(x) defined over a countably finite se
 In probability theory, this is known as sampling from a discrete distribution.
 First define the values in the range of a discrete random variable named X, and then assigne to this values a weight of frequency.
 """
-
-# %%
-# !! {"metadata":{
-# !!   "id": "fMdWQqsdkgo1"
-# !! }}
+#-------------------------------------------------------
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# %%
-# !! {"metadata":{
-# !!   "id": "xSQzvb94kg8G"
-# !! }}
+
+#-------------------------------------------------------
 def main():
     n = int(input("Size of the sample: "))
     if n < 0:
@@ -59,39 +50,7 @@ def main():
         plt.tight_layout()
         plt.show()
 
-# %%
-# !! {"metadata":{
-# !!   "colab": {
-# !!     "base_uri": "https://localhost:8080/",
-# !!     "height": 485
-# !!   },
-# !!   "id": "NhYvLCNguCDx",
-# !!   "executionInfo": {
-# !!     "status": "ok",
-# !!     "timestamp": 1706911212451,
-# !!     "user_tz": 360,
-# !!     "elapsed": 119336,
-# !!     "user": {
-# !!       "displayName": "Uriel Garc\u00eda",
-# !!       "userId": "03386744220426758265"
-# !!     }
-# !!   },
-# !!   "outputId": "9b0ad7b7-3cbd-4a38-d614-3122db0c495d"
-# !! }}
+
+#-------------------------------------------------------
 if __name__ == '__main__':
     main()
-
-# %%
-# !! {"main_metadata":{
-# !!   "colab": {
-# !!     "provenance": [],
-# !!     "authorship_tag": "ABX9TyMCmPT9/P9kwLGOOkR/Z4Bh"
-# !!   },
-# !!   "kernelspec": {
-# !!     "display_name": "Python 3",
-# !!     "name": "python3"
-# !!   },
-# !!   "language_info": {
-# !!     "name": "python"
-# !!   }
-# !! }}
