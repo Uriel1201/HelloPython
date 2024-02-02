@@ -1,32 +1,23 @@
-# %%
-# !! {"metadata":{
-# !!   "id": "LM0_px9PJlIs"
-# !! }}
+#----------------------------------------------------------------------------
 """
 #Random Walker
-This process is known as a two-dimensional random walk. This process is a discrete version of a natural phenomenon known as Brownian motion.
+This process is known as a two-dimensional random walk. 
+This process is a discrete version of a natural phenomenon 
+known as Brownian motion.
 """
-
-# %%
-# !! {"metadata":{
-# !!   "id": "vCz0L_XYJlll"
-# !! }}
+#----------------------------------------------------------------------------
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# %%
-# !! {"metadata":{
-# !!   "id": "nYqNjGe0uuf1"
-# !! }}
-"""
-Takes an integer r and simulates the motion of a random walk until the random walker is at Manhattan distance r from the starting point
-"""
 
-# %%
-# !! {"metadata":{
-# !!   "id": "hqU-3tWBJo1Z"
-# !! }}
+#----------------------------------------------------------------------------
+"""
+Takes an integer r and simulates the motion of a random walk 
+until the random walker is at Manhattan distance r 
+from the starting point
+"""
+#----------------------------------------------------------------------------
 def main():
     r = int(input("Manhattan Distance from the starting point: "))
     if r < 0:
@@ -70,39 +61,7 @@ def main():
         plt.tight_layout()
         plt.show()
 
-# %%
-# !! {"metadata":{
-# !!   "colab": {
-# !!     "base_uri": "https://localhost:8080/",
-# !!     "height": 331
-# !!   },
-# !!   "id": "StexYYOnSl08",
-# !!   "executionInfo": {
-# !!     "status": "ok",
-# !!     "timestamp": 1706836642354,
-# !!     "user_tz": 360,
-# !!     "elapsed": 5707,
-# !!     "user": {
-# !!       "displayName": "Uriel Garc\u00eda",
-# !!       "userId": "03386744220426758265"
-# !!     }
-# !!   },
-# !!   "outputId": "741aae8d-04d8-4384-bb08-58b62296c0fa"
-# !! }}
+
+#----------------------------------------------------------------------------
 if __name__ == '__main__':
     main()
-
-# %%
-# !! {"main_metadata":{
-# !!   "colab": {
-# !!     "provenance": [],
-# !!     "authorship_tag": "ABX9TyMyN5GJ8t+1A2LHiRWNlslv"
-# !!   },
-# !!   "kernelspec": {
-# !!     "name": "python3",
-# !!     "display_name": "Python 3"
-# !!   },
-# !!   "language_info": {
-# !!     "name": "python"
-# !!   }
-# !! }}
