@@ -57,7 +57,7 @@ def main():
             total_steps += steps
             dot = 1.0 * total_steps / (t + 1)
             x.append(dot)
-        print(f'Average Number of Steps: {1.0 * sum / trials}')
+        print(f'Average Number of Steps: {1.0 * total_steps / trials}')
         X = np.array(x, dtype = float)
         index = np.arange(len(X))
         plt.figure(figsize = (9, 7))
