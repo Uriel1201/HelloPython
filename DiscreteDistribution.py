@@ -2,9 +2,13 @@
 """
 # Discrete Distribution Simulation
 This script presents a simple algorithm for sampling
-from a discrete probability distribution p(x) defined over a countably finite set.
-In probability theory, this is known as sampling from a discrete distribution.
-First define the values in the range of a discrete random variable named X, and then assigne to this values a weight of frequency.
+from a discrete probability distribution p(x) defined over 
+a countably finite set.
+In probability theory, this is known as sampling from a 
+discrete distribution.
+First define the values in the range of a discrete random 
+variable named X, and then assigne to this values a 
+weight of frequency.
 """
 #-------------------------------------------------------
 import numpy as np
