@@ -1,47 +1,32 @@
-# %%
-# !! {"metadata":{
-# !!   "id": "XKrZ1KjUwJ-8"
-# !! }}
+#-------------------------------------------------------
 """
 # The MinesweeperGame
-Minesweeper is single-player logic-based computer game played on rectangular board whose object is to locate a predetermined number of randomly-placed "mines" in the shortest possible time by clicking on "safe" squares while avoiding the squares with mines.
+Minesweeper is single-player logic-based computer game played 
+on rectangular board whose object is to locate 
+a predetermined number of randomly-placed "mines" 
+in the shortest possible time by clicking on "safe" squares 
+while avoiding the squares with mines.
 
-The goal is to deduce which cells contain hidden mines using clues about the number of mines in neighboring cells.
+The goal is to deduce which cells contain hidden mines using clues about 
+the number of mines in neighboring cells.
 """
-
-# %%
-# !! {"metadata":{
-# !!   "id": "z2J4tIaiwLAt"
-# !! }}
+#-------------------------------------------------------
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as pch
 from matplotlib.collections import PatchCollection
 
-# %%
-# !! {"metadata":{
-# !!   "id": "qpfnBY2xPOtv"
-# !! }}
+
+#-------------------------------------------------------
 """
-> 1. Generate an m-by-n grid of cells, with exactly k of the mn cells containing mines, uniformly at random.
-> 2. For each cell not containing a mine, count the number of neighboring mines (above, below, left, right, or diagonal).
+> 1. Generate an m-by-n grid of cells, 
+     with exactly k of the mn cells containing mines, 
+     uniformly at random.
+> 2. For each cell not containing a mine, count the number of neighboring mines 
+     (above, below, left, right, or diagonal).
 > 3. Black for the cells containing a mine.
 """
 
-# %%
-# !! {"metadata":{
-# !!   "id": "7cgAmbYxwLsV",
-# !!   "executionInfo": {
-# !!     "status": "ok",
-# !!     "timestamp": 1707169267251,
-# !!     "user_tz": 360,
-# !!     "elapsed": 588,
-# !!     "user": {
-# !!       "displayName": "Uriel Garc\u00eda",
-# !!       "userId": "03386744220426758265"
-# !!     }
-# !!   }
-# !! }}
 def main():
     m = int(input("Number of Rows: "))
     if m <= 0:
@@ -82,39 +67,7 @@ def main():
     plt.title(f'The Minesweeper Game')
     plt.show()
 
-# %%
-# !! {"metadata":{
-# !!   "colab": {
-# !!     "base_uri": "https://localhost:8080/",
-# !!     "height": 334
-# !!   },
-# !!   "id": "nzb2S411xrTh",
-# !!   "executionInfo": {
-# !!     "status": "ok",
-# !!     "timestamp": 1707169282351,
-# !!     "user_tz": 360,
-# !!     "elapsed": 11617,
-# !!     "user": {
-# !!       "displayName": "Uriel Garc\u00eda",
-# !!       "userId": "03386744220426758265"
-# !!     }
-# !!   },
-# !!   "outputId": "2ffaa3c8-da6e-4c13-9627-ba891071942d"
-# !! }}
+
+#-------------------------------------------------------    
 if __name__ == '__main__':
     main()
-
-# %%
-# !! {"main_metadata":{
-# !!   "colab": {
-# !!     "provenance": [],
-# !!     "authorship_tag": "ABX9TyNHJOzVD8CMxn3T6FoYRSTW"
-# !!   },
-# !!   "kernelspec": {
-# !!     "name": "python3",
-# !!     "display_name": "Python 3"
-# !!   },
-# !!   "language_info": {
-# !!     "name": "python"
-# !!   }
-# !! }}
