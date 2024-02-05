@@ -1,45 +1,29 @@
-# %%
-# !! {"metadata":{
-# !!   "id": "nAtqf1Uu3-Dn"
-# !! }}
+#---------------------------------------------------------
 """
 # The Birthday Problem.
 ## An application to Occupancy Problems
-Consider the conceptual 'experiment' of randomly tagging items into n labels. The random tagging of items continues until for the first time an item is tagged into a label already occupied.
+Consider the conceptual 'experiment' of randomly tagging items into n labels. 
+The random tagging of items continues until for the first time 
+an item is tagged into a label already occupied.
 
-The Birthday Problem amount to this: If we select people at random one by one, how many people shall we have to sample in order to find a pair with a common birthday?
+The Birthday Problem amount to this: If we select people at random one by one, 
+how many people shall we have to sample in order to find 
+a pair with a common birthday?
 """
-
-# %%
-# !! {"metadata":{
-# !!   "id": "FifoD4KJ3-bh"
-# !! }}
+#---------------------------------------------------------
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# %%
-# !! {"metadata":{
-# !!   "id": "VHLWspEPdVh2"
-# !! }}
+
+#---------------------------------------------------------
 """
-This simulation shows off the amazing result that, among 't' number of trials, the fraction in which the first duplicate birthday happens before the 24th person enters surpasses 50%.
+This simulation shows off the amazing result that, 
+among 't' number of trials, the fraction in which 
+the first duplicate birthday happens before the 24th person enters 
+surpasses 50%.
 """
 
-# %%
-# !! {"metadata":{
-# !!   "id": "6iKM2Koa3_Jc",
-# !!   "executionInfo": {
-# !!     "status": "ok",
-# !!     "timestamp": 1707157850062,
-# !!     "user_tz": 360,
-# !!     "elapsed": 20,
-# !!     "user": {
-# !!       "displayName": "Uriel Garc\u00eda",
-# !!       "userId": "03386744220426758265"
-# !!     }
-# !!   }
-# !! }}
 def main():
     n = int(input("The range for the variable X: "))
     trials= int(input("Number of Simulations: "))
@@ -77,39 +61,7 @@ def main():
     plt.tight_layout()
     plt.show()
 
-# %%
-# !! {"metadata":{
-# !!   "id": "sJtD5HPc4Bh7",
-# !!   "colab": {
-# !!     "base_uri": "https://localhost:8080/",
-# !!     "height": 485
-# !!   },
-# !!   "executionInfo": {
-# !!     "status": "ok",
-# !!     "timestamp": 1707157867904,
-# !!     "user_tz": 360,
-# !!     "elapsed": 13751,
-# !!     "user": {
-# !!       "displayName": "Uriel Garc\u00eda",
-# !!       "userId": "03386744220426758265"
-# !!     }
-# !!   },
-# !!   "outputId": "9ad5b8d4-b982-49c3-bf64-1d1378d8effa"
-# !! }}
+
+#---------------------------------------------------------
 if __name__ == '__main__':
     main()
-
-# %%
-# !! {"main_metadata":{
-# !!   "colab": {
-# !!     "provenance": [],
-# !!     "authorship_tag": "ABX9TyMlAWCQ98fYsWnlN730hkrw"
-# !!   },
-# !!   "kernelspec": {
-# !!     "name": "python3",
-# !!     "display_name": "Python 3"
-# !!   },
-# !!   "language_info": {
-# !!     "name": "python"
-# !!   }
-# !! }}
