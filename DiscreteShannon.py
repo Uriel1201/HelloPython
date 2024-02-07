@@ -51,7 +51,6 @@ def sampling(dist):
     for i in range(1, n):
         if u > dist[i - 1] and u <= dist[i]:
             return i
-    return n
 
 
 #----------------------------------------------------
