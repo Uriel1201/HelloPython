@@ -44,13 +44,35 @@ def distBer(p):
 
 #----------------------------------------------------
 def sampling(dist):
-    u = np.random.rand()
     n = len(dist)
-    if u <= dist[0]:
-        return 0
-    for i in range(1, n):
-        if u > dist[i - 1] and u <= dist[i]:
-            return i
+    if dist[n - 1]
+int n = dist.length;
+    if (dist[n - 1] != 1) {
+      
+      throw new IllegalArgumentException("This array must represent a probability distribution");
+    }
+
+    for (int i = 1; i < n; i++) {
+
+      if (dist[i - 1] < 0 || dist[i - 1] > 1) {
+        
+        throw new IllegalArgumentException("This array must represent a probability distribution");
+      }
+      if (dist[i] < dist[i - 1]) {
+        throw new IllegalArgumentException("This array must represent a probability distribution");
+      }
+    }
+
+    double u = Math.random();
+    for (int i = 0; i < n - 1; i++) {
+
+      if (u <= dist[i]) {
+
+        return i;
+      }
+    }
+    return n - 1;
+}
 
 
 #----------------------------------------------------
