@@ -40,7 +40,7 @@ def distBer(p):
         raise ValueError(f'p must represent a probability measure')
     ber = np.array([1.0 - p, 1.0])
     return ber
-
+    
 
 #----------------------------------------------------
 def sampling(dist):
