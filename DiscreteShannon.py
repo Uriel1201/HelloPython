@@ -48,16 +48,11 @@ def sampling(dist):
      if dist[-1] != 1:
           raise ValueError(f'This array must represent a probability distribution')
      if np.any(dist < 0) or np.any(dist > 1):
-               raise ValueError(f'This array must represent a probability distribution')
+          raise ValueError(f'This array must represent a probability distribution')
      if np.any(dist[:-1] > dist[1:]):
-               raise ValueError(f'This array must represent a probability distribution')
+          raise ValueError(f'This array must represent a probability distribution')
      u = np.random.rand()
-     for i in range(n - 1):
-          if u <= dist[i]:
-               return i
-     return n - 1 
-import numpy as np
-
+     return np.argmax(u <= )
 def sampling(dist):
     dist = np.array(dist)
     if dist[-1] != 1:
