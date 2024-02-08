@@ -52,12 +52,14 @@ def sampling(dist):
      if np.any(dist[:-1] > dist[1:]):
           raise ValueError(f'This array must represent a probability distribution')
      u = np.random.rand()
-     return np.searchsorted(dist, u, side='left')
+     return np.searchsorted(dist, u, side = 'left')
 
 
 #----------------------------------------------------
 def discreteShannon(array, m):
-    if m < 0:
+     if not isinstance(m, int):
+          raise ValueError(f'm must be a cardinal')
+     if m < 0:
         raise ValueError(f'm must be a cardinal')
     f = np.zeros(m, dtype = int)
     n = len(array)
@@ -75,7 +77,30 @@ def discreteShannon(array, m):
             arg = -1.0 * p * np.log(p) / np.log(2)
             h += arg
     return h
+import numpy as np
 
+def discreteShannon(array, m):
+    if m < 0:
+        raise ValueError('m must be non-negative')
+
+    if not isinstance(m, int):
+        raise ValueError('m must be an integer')
+
+    if not isinstance(array, np.ndarray):
+        array = np.array(array)
+
+    if m == 0:
+        return 0.0
+
+    n = len(array)
+    unique_elements, counts = np.unique(array, return_counts=True)
+    f = np.zeros(m, dtype=float)
+    f[unique_elements[unique_elements < m]] = counts[unique_elements < m]
+
+    p = f / n
+    h = np.sum(-p * np.log2(p[p > 0]))
+
+    return h
 
 #----------------------------------------------------
 def main():
