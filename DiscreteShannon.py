@@ -44,20 +44,31 @@ def distBer(p):
 
 #----------------------------------------------------
 def sampling(dist):
-     n = len(dist)
-     if dist[n - 1] != 1:
+     dist = np.array(dist)
+     if dist[-1] != 1:
           raise ValueError(f'This array must represent a probability distribution')
-     for i in range(1, n):
-          if dist[i - 1] < 0 or dist[i - 1] > 1:
+     if np.any(dist < 0) or np.any(dist > 1):
                raise ValueError(f'This array must represent a probability distribution')
-          if dist[i] < dist[i - 1]:
+     if np.any(dist[:-1] > dist[1:]):
                raise ValueError(f'This array must represent a probability distribution')
      u = np.random.rand()
      for i in range(n - 1):
           if u <= dist[i]:
                return i
      return n - 1 
-          
+import numpy as np
+
+def sampling(dist):
+    dist = np.array(dist)
+    if dist[-1] != 1:
+        raise ValueError('This array must represent a probability distribution')
+    if np.any(dist < 0) or np.any(dist > 1):
+        raise ValueError('This array must represent a probability distribution')
+    if np.any(dist[:-1] > dist[1:]):
+        raise ValueError('This array must represent a probability distribution')
+    
+    u = np.random.rand()
+    return np.argmax(u <= np.cumsum(dist))
 
 #----------------------------------------------------
 def discreteShannon(array, m):
