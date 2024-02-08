@@ -52,18 +52,8 @@ def sampling(dist):
      if np.any(dist[:-1] > dist[1:]):
           raise ValueError(f'This array must represent a probability distribution')
      u = np.random.rand()
-     return np.argmax(u <= )
-def sampling(dist):
-    dist = np.array(dist)
-    if dist[-1] != 1:
-        raise ValueError('This array must represent a probability distribution')
-    if np.any(dist < 0) or np.any(dist > 1):
-        raise ValueError('This array must represent a probability distribution')
-    if np.any(dist[:-1] > dist[1:]):
-        raise ValueError('This array must represent a probability distribution')
-    
-    u = np.random.rand()
-    return np.argmax(u <= np.cumsum(dist))
+     return np.searchsorted(dist, u, side='left')
+
 
 #----------------------------------------------------
 def discreteShannon(array, m):
