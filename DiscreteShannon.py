@@ -63,15 +63,14 @@ def discreteShannon(array, m):
         raise ValueError(f'm must be a cardinal')
      if not isinstance(array, np.ndarray):
           array = np.array(array)
-    f = np.zeros(m, dtype = int)
-    n = len(array) 
-    unique_elements, counts = np.unique(array, return_counts=True)
-    f[unique_elements[unique_elements < m]] = counts[unique_elements < m]
-
-    p = f / n
-    h = np.sum(-p * np.log2(p[p > 0]))
-
-    return h
+     f = np.zeros(m, dtype = int)
+     n = len(array) 
+     unique_elements, counts = np.unique(array, return_counts=True)
+     f[unique_elements[unique_elements < m]] = counts[unique_elements < m]
+     p = f / n
+     h = np.sum(-p * np.log2(p[p > 0]))
+     return h
+     
 
 #----------------------------------------------------
 def main():
