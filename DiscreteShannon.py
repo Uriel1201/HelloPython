@@ -61,40 +61,11 @@ def discreteShannon(array, m):
           raise ValueError(f'm must be a cardinal')
      if m < 0:
         raise ValueError(f'm must be a cardinal')
+     if not isinstance(array, np.ndarray):
+          array = np.array(array)
     f = np.zeros(m, dtype = int)
-    n = len(array)
-    for i in range(n):
-        if array[i] < 0:
-            raise ValueError(f'The entries must be no negative')
-        elif array[i] == 0:
-            f[0] += 1
-        elif array[i] < m:
-            f[array[i]] += 1
-    h = 0.0
-    for i in range(m):
-        if f[i] > 0:
-            p = 1.0 * f[i] / n
-            arg = -1.0 * p * np.log(p) / np.log(2)
-            h += arg
-    return h
-import numpy as np
-
-def discreteShannon(array, m):
-    if m < 0:
-        raise ValueError('m must be non-negative')
-
-    if not isinstance(m, int):
-        raise ValueError('m must be an integer')
-
-    if not isinstance(array, np.ndarray):
-        array = np.array(array)
-
-    if m == 0:
-        return 0.0
-
-    n = len(array)
+    n = len(array) 
     unique_elements, counts = np.unique(array, return_counts=True)
-    f = np.zeros(m, dtype=float)
     f[unique_elements[unique_elements < m]] = counts[unique_elements < m]
 
     p = f / n
