@@ -1,5 +1,6 @@
 #---------------------------------------------------------------------
 '''
+# Activation Functions 
 When working with artificial neural network models, we need a training phase to enhance their predictive ability. 
 Input-output pairs are presented to the model, and weights 
 are adjusted to minimize the error between the network output and the real values. 
