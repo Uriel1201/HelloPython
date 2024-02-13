@@ -11,9 +11,9 @@ in generating public and private keys.
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+
+
 #-----------------------------------------------------------------------
-
-
 """
 ### gcd(a, b):
 The greatest common divisor (gcd) of two integers a and b. 
