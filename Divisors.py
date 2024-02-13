@@ -1,13 +1,19 @@
+#-----------------------------------------------------------------------
+"""
+# Divisors Methods
+Euler's Totient function plays a crucial role in various areas of mathematics 
+including number theory, cryptography, and algorithms. 
+For instance the security of RSA encryption relies on the difficulty of 
+factoring large numbers, which is facilitated by the use of this function 
+in generating public and private keys.
+"""
+#-----------------------------------------------------------------------
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+#-----------------------------------------------------------------------
 
 
-#-----------------------------------------------------------------------
-"""
-# **Divisors Methods**
-"""
-#-----------------------------------------------------------------------
 """
 ### gcd(a, b):
 The greatest common divisor (gcd) of two integers a and b. 
