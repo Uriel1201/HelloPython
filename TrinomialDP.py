@@ -1,26 +1,17 @@
-# %%
-# !! {"metadata":{
-# !!   "id": "RffRKq2ItuwE"
-# !! }}
+#---------------------------------------------------------------
 """
 # Trinomial Coefficients
 Trinomial coefficients arise in combinatorics. The trinomial coefficient,
 denoted as T(n, k), represents the coefficient of x^(n+k) in the expansion
 of (1+x+x^2)^n. This script computes the trinomial coefficient T(n,k) using dynamic programming. This version should be fast enough to handle larger values of n and k.
 """
-
-# %%
-# !! {"metadata":{
-# !!   "id": "78QPxwS0Ikcm"
-# !! }}
+#---------------------------------------------------------------
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# %%
-# !! {"metadata":{
-# !!   "id": "uEa2p8F6uZ7O"
-# !! }}
+
+#---------------------------------------------------------------
 def trinomial(n, k):
     if k < 0:
         k = -k
@@ -40,10 +31,8 @@ def trinomial(n, k):
             triangle[i][j] = triangle[i - 1][j] + triangle[i - 1][j - 1] + triangle[i - 1][j - 2]
     return triangle[n][n + k + 1]
 
-# %%
-# !! {"metadata":{
-# !!   "id": "LpoF-Os5tw6y"
-# !! }}
+
+#---------------------------------------------------------------
 def main():
     n = int(input(f'integer n: '))
     k = np.arange(-n, n + 1, dtype = int)
@@ -57,39 +46,7 @@ def main():
     plt.show()
     print(f'trinomial({n}, {k[n]}): {y[n]}')
 
-# %%
-# !! {"metadata":{
-# !!   "colab": {
-# !!     "base_uri": "https://localhost:8080/",
-# !!     "height": 349
-# !!   },
-# !!   "id": "vCG6FBcuuGvz",
-# !!   "executionInfo": {
-# !!     "status": "ok",
-# !!     "timestamp": 1707959198180,
-# !!     "user_tz": 360,
-# !!     "elapsed": 5955,
-# !!     "user": {
-# !!       "displayName": "Uriel Garc\u00eda",
-# !!       "userId": "03386744220426758265"
-# !!     }
-# !!   },
-# !!   "outputId": "9ba43d7b-9c72-440e-e15f-0195146d52e0"
-# !! }}
+
+#---------------------------------------------------------------
 if __name__ == '__main__':
     main()
-
-# %%
-# !! {"main_metadata":{
-# !!   "colab": {
-# !!     "provenance": [],
-# !!     "authorship_tag": "ABX9TyMxT41PQuPr/atUMfPJh5Uk"
-# !!   },
-# !!   "kernelspec": {
-# !!     "name": "python3",
-# !!     "display_name": "Python 3"
-# !!   },
-# !!   "language_info": {
-# !!     "name": "python"
-# !!   }
-# !! }}
