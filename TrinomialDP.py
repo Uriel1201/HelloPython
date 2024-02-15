@@ -3,7 +3,9 @@
 # Trinomial Coefficients
 Trinomial coefficients arise in combinatorics. The trinomial coefficient,
 denoted as T(n, k), represents the coefficient of x^(n+k) in the expansion
-of (1+x+x^2)^n. This script computes the trinomial coefficient T(n,k) using dynamic programming. This version should be fast enough to handle larger values of n and k.
+of (1+x+x^2)^n. This script computes the trinomial coefficient T(n,k) 
+using dynamic programming. This version should be fast enough to handle 
+larger values of n and k.
 """
 #---------------------------------------------------------------
 import numpy as np
